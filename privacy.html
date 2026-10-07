@@ -10,23 +10,40 @@
 <div class="wrap">
 
 <h1>Privacy Policy</h1>
-<p class="meta">Effective August 22, 2026</p>
+<p class="meta">Effective October 6, 2026</p>
 
 <p>This policy explains what Pouf does with your data. It applies to the Pouf mobile app provided by <strong>RY Mobile Software</strong>.</p>
 
 <h2>Summary</h2>
-<p>Pouf does not require an account and does not ask for your name, email address, or phone number. The only data we handle is the photo you choose to edit, and it is used solely to produce the edited result you asked for.</p>
+<p>Pouf does not ask you to create an account and does not ask for your name, email address, or phone number. To apply free and PRO usage limits, the app signs you in with a random anonymous identifier that is not linked to your real identity.</p>
+<p>We handle three kinds of data: the photos you choose to edit, usage counters linked to your anonymous identifier, and — if you subscribe — your subscription status.</p>
+
+<h2>Anonymous Identifier and Usage Counters</h2>
+<p>When you first open the app, it is assigned a random anonymous identifier through Firebase Authentication. The identifier is stored on your device and lets us apply usage limits fairly.</p>
+<p>Linked to this identifier, our database stores your plan (free, trial, or PRO), how many background removals and erases you have used, and the day and month those counts refer to. If you subscribe, we also store the subscription product, whether it is in a trial period, and when it expires.</p>
+<p>We do not link this information to your name, email address, or Google account. It is used only to apply usage limits and manage your subscription.</p>
+<p>If you uninstall the app or clear its data, the app receives a new anonymous identifier, and data linked to the old identifier is no longer accessible from your device. We keep usage data for as long as it is needed to operate the service and to prevent misuse of free limits.</p>
 
 <h2>Photos You Edit</h2>
 <p>When you select a photo, the app resizes it on your device and sends it to our processing server over an encrypted connection (HTTPS).</p>
-<p>Our server forwards the photo to third-party AI providers that perform the actual editing (background removal, object removal, and object detection). The processed result is returned to your device.</p>
+<p>Our server does not store your photos. It forwards them to a third-party AI provider that performs the actual editing (background removal, object removal, and object detection), and the processed result is returned to your device.</p>
+<p>Temporary copies created during processing are set to be deleted automatically within one hour.</p>
 <p>Photos are processed only to fulfil your request. They are not used to train AI models by us, and they are not shared with advertisers or sold to anyone.</p>
 <p>The edited result is stored only on your device, in the app cache and — if you tap Save — in your gallery. Clearing the app data or uninstalling removes the cached files.</p>
 
-<h2>Third-Party Processing</h2>
-<p>Image editing is carried out by external AI services. When your photo is sent for processing, it is handled by those providers under their own privacy terms.</p>
-<p>Our server infrastructure is provided by Google Cloud / Firebase.</p>
-<p>These providers process your photo only to return the edited result and act on our instructions.</p>
+<h2>Subscriptions and Purchases</h2>
+<p>Purchases are processed by Google Play. We never receive your payment card details.</p>
+<p>We use RevenueCat to manage subscriptions. When you start a trial or subscription, or restore a purchase, RevenueCat receives your anonymous identifier and purchase information from Google Play — such as the product, order and transaction identifiers, purchase dates, and subscription status — along with basic technical information such as app version and platform.</p>
+<p>RevenueCat notifies our server when your subscription starts, renews, or ends, so that PRO access is applied to your anonymous identifier. Purchase data is used only to provide and support your subscription.</p>
+
+<h2>Service Providers</h2>
+<p><strong>fal.ai</strong> — AI image processing.</p>
+<p><strong>Google Cloud / Firebase</strong> — server infrastructure, anonymous sign-in, and the database that stores usage counters.</p>
+<p><strong>RevenueCat</strong> — subscription management.</p>
+<p>These providers process data only to provide their service to us and act on our instructions. Payments are handled by <strong>Google Play</strong> under Google's own privacy policy.</p>
+
+<h2>Server Logs</h2>
+<p>Our servers keep technical logs, such as request times and error information, which may include your IP address. These logs are used for security and troubleshooting and are kept for a limited period, typically up to 30 days.</p>
 
 <h2>Permissions We Request</h2>
 <p>Photos and media: needed so you can choose a photo to edit and save the result back to your gallery. The app can only see the photos you explicitly select.</p>
@@ -36,17 +53,17 @@
 <h2>Data We Do Not Collect</h2>
 <p>We do not collect your name, email, phone number, contacts, or location.</p>
 <p>We do not track you across other apps or websites, and we do not use advertising identifiers.</p>
-<p>We do not create a user profile or link edits to your identity.</p>
+<p>We do not keep a history of the photos you edit, and we do not build advertising profiles.</p>
 
 <h2>Children</h2>
 <p>Pouf is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, contact us and we will delete it.</p>
 
 <h2>Your Rights</h2>
 <p>Depending on where you live, you may have the right to access, correct, or delete personal data we hold about you, and to object to or restrict its processing.</p>
-<p>Because the app does not create accounts and does not retain your photos after processing, we typically hold no personal data about you. If you have a request, contact us at the address below.</p>
+<p>Because we do not know your name or email address, we can only locate your data if you help us identify it. For requests about a subscription, please include your Google Play order number (it starts with "GPA."). You can stop all further processing at any time by uninstalling the app.</p>
 
 <h2>Security</h2>
-<p>All communication between the app and our servers uses encrypted HTTPS connections. Access to our processing infrastructure is restricted.</p>
+<p>All communication between the app and our servers uses encrypted HTTPS connections. Access to our processing infrastructure and database is restricted, and the app cannot modify usage data directly.</p>
 <p>No method of transmission over the internet is completely secure, so we cannot guarantee absolute security.</p>
 
 <h2>Changes to This Policy</h2>
