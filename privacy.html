@@ -10,19 +10,24 @@
 <div class="wrap">
 
 <h1>Privacy Policy</h1>
-<p class="meta">Effective October 6, 2026</p>
+<p class="meta">Effective November 5, 2026</p>
 
 <p>This policy explains what Pouf does with your data. It applies to the Pouf mobile app provided by <strong>RY Mobile Software</strong>.</p>
 
 <h2>Summary</h2>
 <p>Pouf does not ask you to create an account and does not ask for your name, email address, or phone number. To apply free and PRO usage limits, the app signs you in with a random anonymous identifier that is not linked to your real identity.</p>
-<p>We handle three kinds of data: the photos you choose to edit, usage counters linked to your anonymous identifier, and — if you subscribe — your subscription status.</p>
+<p>We handle four kinds of data: the photos you choose to edit, usage counters linked to your anonymous identifier, a device identifier used only to prevent abuse of free limits, and — if you subscribe — your subscription status.</p>
 
 <h2>Anonymous Identifier and Usage Counters</h2>
 <p>When you first open the app, it is assigned a random anonymous identifier through Firebase Authentication. The identifier is stored on your device and lets us apply usage limits fairly.</p>
 <p>Linked to this identifier, our database stores your plan (free, trial, or PRO), how many background removals and erases you have used, and the day and month those counts refer to. If you subscribe, we also store the subscription product, whether it is in a trial period, and when it expires.</p>
 <p>We do not link this information to your name, email address, or Google account. It is used only to apply usage limits and manage your subscription.</p>
-<p>If you uninstall the app or clear its data, the app receives a new anonymous identifier, and data linked to the old identifier is no longer accessible from your device. We keep usage data for as long as it is needed to operate the service and to prevent misuse of free limits.</p>
+<p>If you uninstall the app or clear its data, the app receives a new anonymous identifier, and data linked to the old identifier is no longer accessible from your device. Free limits are also counted per device (see below), so reinstalling the app does not reset them. We keep usage data for as long as it is needed to operate the service and to prevent misuse of free limits.</p>
+
+<h2>Device Identifier and Abuse Prevention</h2>
+<p>To prevent misuse of free limits — for example, reinstalling the app repeatedly to get new free edits — the app sends a device identifier with each editing request. On Android this is the app-specific Android ID; on iOS it is a random identifier created by the app and stored in the device Keychain.</p>
+<p>Our server does not store this identifier in readable form. It keeps only a salted one-way hash of it, together with the number of free background removals and erases used on that device and the time of last use. For older app versions that do not send a device identifier, the server may also keep a salted one-way hash of the network address prefix of the request, together with that day's free usage count; this record is overwritten daily.</p>
+<p>This data is used only for fraud prevention and security. It is not shared with third parties, not sold, and not used for advertising or tracking. It does not apply to free trials or PRO subscriptions, and it is not linked to your name, email address, or Google or Apple account.</p>
 
 <h2>Photos You Edit</h2>
 <p>When you select a photo, the app resizes it on your device and sends it to our processing server over an encrypted connection (HTTPS).</p>
@@ -32,18 +37,18 @@
 <p>The edited result is stored only on your device, in the app cache and — if you tap Save — in your gallery. Clearing the app data or uninstalling removes the cached files.</p>
 
 <h2>Subscriptions and Purchases</h2>
-<p>Purchases are processed by Google Play. We never receive your payment card details.</p>
-<p>We use RevenueCat to manage subscriptions. When you start a trial or subscription, or restore a purchase, RevenueCat receives your anonymous identifier and purchase information from Google Play — such as the product, order and transaction identifiers, purchase dates, and subscription status — along with basic technical information such as app version and platform.</p>
+<p>Purchases are processed by Google Play or the Apple App Store. We never receive your payment card details.</p>
+<p>We use RevenueCat to manage subscriptions. When you start a trial or subscription, or restore a purchase, RevenueCat receives your anonymous identifier and purchase information from Google Play or the App Store — such as the product, order and transaction identifiers, purchase dates, and subscription status — along with basic technical information such as app version and platform.</p>
 <p>RevenueCat notifies our server when your subscription starts, renews, or ends, so that PRO access is applied to your anonymous identifier. Purchase data is used only to provide and support your subscription.</p>
 
 <h2>Service Providers</h2>
 <p><strong>fal.ai</strong> — AI image processing.</p>
-<p><strong>Google Cloud / Firebase</strong> — server infrastructure, anonymous sign-in, and the database that stores usage counters.</p>
+<p><strong>Google Cloud / Firebase</strong> — server infrastructure, anonymous sign-in, and the database that stores usage counters and hashed device records.</p>
 <p><strong>RevenueCat</strong> — subscription management.</p>
-<p>These providers process data only to provide their service to us and act on our instructions. Payments are handled by <strong>Google Play</strong> under Google's own privacy policy.</p>
+<p>These providers process data only to provide their service to us and act on our instructions. Payments are handled by <strong>Google Play</strong> or the <strong>Apple App Store</strong> under their own privacy policies.</p>
 
 <h2>Server Logs</h2>
-<p>Our servers keep technical logs, such as request times and error information, which may include your IP address. These logs are used for security and troubleshooting and are kept for a limited period, typically up to 30 days.</p>
+<p>Our servers keep technical logs, such as request times and error information, which may include your IP address. These logs are used for security and troubleshooting and are kept for a limited period, typically up to 30 days. Separately, hashed network records used for abuse prevention are described in the "Device Identifier and Abuse Prevention" section above.</p>
 
 <h2>Permissions We Request</h2>
 <p>Photos and media: needed so you can choose a photo to edit and save the result back to your gallery. The app can only see the photos you explicitly select.</p>
